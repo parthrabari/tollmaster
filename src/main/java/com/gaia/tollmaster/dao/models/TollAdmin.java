@@ -1,9 +1,7 @@
-package com.gaia.tollmaster.dao.Models;
+package com.gaia.tollmaster.dao.models;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 import javax.validation.constraints.Size;
 
 /**

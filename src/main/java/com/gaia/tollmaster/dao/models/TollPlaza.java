@@ -1,4 +1,4 @@
-package com.gaia.tollmaster.dao.Models;
+package com.gaia.tollmaster.dao.models;
 
 import javax.persistence.*;
 

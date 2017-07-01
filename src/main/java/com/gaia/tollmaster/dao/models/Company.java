@@ -1,4 +1,4 @@
-package com.gaia.tollmaster.dao.Models;
+package com.gaia.tollmaster.dao.models;
 
 /**
  * Created by Parth on 01/07/2017.
