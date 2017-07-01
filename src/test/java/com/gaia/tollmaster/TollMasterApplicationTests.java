@@ -1,4 +1,4 @@
-package com.gaia.TollMaster;
+package com.gaia.tollmaster;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
