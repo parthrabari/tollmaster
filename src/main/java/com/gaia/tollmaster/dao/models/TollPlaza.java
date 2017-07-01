@@ -17,6 +17,14 @@ public class TollPlaza {
     @OneToOne
     private TollAdmin adminName;
 
+    private Character Type;
+
+    @Column(precision = 10)
+    private double entryExit0;
+
+    @Column(precision = 10)
+    private double entryExit1;
+
     public int getTollId() {
         return tollId;
     }
