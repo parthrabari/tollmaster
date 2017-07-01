@@ -48,4 +48,28 @@ public class TollPlaza {
     public void setAdminName(TollAdmin adminName) {
         this.adminName = adminName;
     }
+
+    public Character getType() {
+        return Type;
+    }
+
+    public void setType(Character type) {
+        Type = type;
+    }
+
+    public double getEntryExit0() {
+        return entryExit0;
+    }
+
+    public void setEntryExit0(double entryExit0) {
+        this.entryExit0 = entryExit0;
+    }
+
+    public double getEntryExit1() {
+        return entryExit1;
+    }
+
+    public void setEntryExit1(double entryExit1) {
+        this.entryExit1 = entryExit1;
+    }
 }
