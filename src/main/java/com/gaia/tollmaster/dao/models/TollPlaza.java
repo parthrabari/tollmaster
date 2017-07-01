@@ -1,6 +1,7 @@
 package com.gaia.tollmaster.dao.models;
 
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 
 /**
  * Created by Parth on 01/07/2017.
@@ -17,6 +18,7 @@ public class TollPlaza {
     @OneToOne
     private TollAdmin adminName;
 
+    @Size(max = 1, min = 1)
     private Character Type;
 
     @Column(precision = 10)
@@ -24,6 +26,18 @@ public class TollPlaza {
 
     @Column(precision = 10)
     private double entryExit1;
+
+    public TollPlaza() {
+    }
+
+    public TollPlaza(int tollId, String name, TollAdmin adminName, Character type, double entryExit0, double entryExit1) {
+        this.tollId = tollId;
+        this.name = name;
+        this.adminName = adminName;
+        Type = type;
+        this.entryExit0 = entryExit0;
+        this.entryExit1 = entryExit1;
+    }
 
     public int getTollId() {
         return tollId;

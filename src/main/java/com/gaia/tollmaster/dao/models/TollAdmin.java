@@ -18,6 +18,17 @@ public class TollAdmin {
     private String companyName;
     private String city;
 
+    public TollAdmin(String username, String email, int mobile, String companyName, String city) {
+        this.username = username;
+        this.email = email;
+        this.mobile = mobile;
+        this.companyName = companyName;
+        this.city = city;
+    }
+
+    public TollAdmin() {
+    }
+
     public String getCompanyName() {
         return companyName;
     }
