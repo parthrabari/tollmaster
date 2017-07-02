@@ -1,5 +1,7 @@
 package com.gaia.tollmaster.dao.models;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.Collection;
 
@@ -9,10 +11,6 @@ import java.util.Collection;
 
 @Entity
 public class Company {
-
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int CompId;
-
     @Id
     private String name;
 
@@ -25,8 +23,7 @@ public class Company {
     @OneToMany
     private Collection<TollPlaza> tollPlazas;
 
-    public Company(int compId, String name, int phone, String email, String address, Collection<TollPlaza> tollPlazas) {
-        CompId = compId;
+    public Company(String name, int phone, String email, String address, Collection<TollPlaza> tollPlazas) {
         this.name = name;
         Phone = phone;
         this.email = email;
@@ -35,14 +32,6 @@ public class Company {
     }
 
     public Company() {
-    }
-
-    public int getCompId() {
-        return CompId;
-    }
-
-    public void setCompId(int compId) {
-        CompId = compId;
     }
 
     public String getName() {
