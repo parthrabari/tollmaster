@@ -1,11 +1,13 @@
 package com.gaia.tollmaster.dao.models;
 
+import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
 /**
  * Created by Parth on 01/07/2017.
  */
+@Entity
 public class TollRates {
 
     @Id

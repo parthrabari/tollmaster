@@ -2,6 +2,7 @@ package com.gaia.tollmaster.dao.models;
 
 import javax.persistence.*;
 import javax.validation.constraints.Size;
+import java.util.Collection;
 
 /**
  * Created by Parth on 01/07/2017.
@@ -27,16 +28,28 @@ public class TollPlaza {
     @Column(precision = 10)
     private double entryExit1;
 
+    @OneToMany
+    private Collection<TollRates> tollRates;
+
     public TollPlaza() {
     }
 
-    public TollPlaza(int tollId, String name, TollAdmin adminName, Character type, double entryExit0, double entryExit1) {
+    public TollPlaza(int tollId, String name, TollAdmin adminName, Character type, double entryExit0, double entryExit1, Collection<TollRates> tollRates) {
         this.tollId = tollId;
         this.name = name;
         this.adminName = adminName;
         Type = type;
         this.entryExit0 = entryExit0;
         this.entryExit1 = entryExit1;
+        this.tollRates = tollRates;
+    }
+
+    public Collection<TollRates> getTollRates() {
+        return tollRates;
+    }
+
+    public void setTollRates(Collection<TollRates> tollRates) {
+        this.tollRates = tollRates;
     }
 
     public int getTollId() {
