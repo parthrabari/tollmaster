@@ -10,10 +10,10 @@ import java.util.Collection;
 @Entity
 public class Company {
 
-    @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private int CompId;
 
+    @Id
     private String name;
 
     private int Phone;
